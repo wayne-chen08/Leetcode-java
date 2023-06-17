@@ -29,10 +29,10 @@ public class Sqrt {//這題可以用binary search做
         		else {
         			n = (int)i - 1;
         			break;
-        		}	
+        			}	
+        		}
         	}
-        }
-        return n;
-    }
+        	return n;
+    	}
 
 }
