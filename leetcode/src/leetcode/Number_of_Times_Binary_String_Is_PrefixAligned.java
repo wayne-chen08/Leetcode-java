@@ -21,7 +21,8 @@ public class Number_of_Times_Binary_String_Is_PrefixAligned {
       	int right = 0, res = 0, n = flips.length;
         for (int i = 0; i < n; ++i) {
             right = Math.max(right, flips[i]);
-            if (right == i + 1) ++res;
+            if (right == i + 1) 
+		    res++;
         }
         return res;
 	}
