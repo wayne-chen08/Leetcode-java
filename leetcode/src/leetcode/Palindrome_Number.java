@@ -1,5 +1,5 @@
 package leetcode;
-
+//Given an integer x, return true if x is a palindrome, and false otherwise.
 public class Palindrome_Number {
 
 	public static void main(String[] args) {
