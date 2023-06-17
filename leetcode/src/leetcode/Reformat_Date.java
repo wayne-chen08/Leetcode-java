@@ -24,7 +24,7 @@ public class Reformat_Date {
         String month = date.split(" ")[1];
         String day = date.split(" ")[0];
         
-        var month_map = new HashMap<String, String>();{
+        var month_map = new HashMap<String, String>();{ //用來把月份的英文轉成數字
         	{
         		month_map.put("Jan", "01");
         		month_map.put("Feb", "02");
