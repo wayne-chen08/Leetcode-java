@@ -28,35 +28,35 @@ public class Design_Parking_System {
 class ParkingSystem {
 	
 	private int big, medium, small;
-    public ParkingSystem(int big, int medium, int small) {
-        this.big = big;
-        this.medium = medium;
-        this.small = small;
-    }
+    	public ParkingSystem(int big, int medium, int small) {
+        	this.big = big;
+        	this.medium = medium;
+        	this.small = small;
+    	}
     
-    public boolean addCar(int carType) {
-        if(carType == 1) {
-        	if(big > 0) {
-        		big--;
-        		return true;
+    	public boolean addCar(int carType) {
+        	if(carType == 1) {
+        		if(big > 0) {
+        			big--;
+        			return true;
+        		}
+        		return false;
         	}
-        	return false;
-        }
         
-        if(carType == 2) {
-        	if(medium > 0) {
-        		medium--;
-        		return true;
+        	if(carType == 2) {
+        		if(medium > 0) {
+        			medium--;
+        			return true;
+        		}
+        		return false;
         	}
-        	return false;
-        }
         
-        else {
-        	if(small > 0) {
-        		small--;
-        		return true;
+        	else {
+        		if(small > 0) {
+        			small--;
+        			return true;
+        		}
+        		return false;
         	}
-        	return false;
-        }
-    }
+    	}
 }
