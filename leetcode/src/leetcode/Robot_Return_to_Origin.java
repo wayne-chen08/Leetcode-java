@@ -21,27 +21,27 @@ public class Robot_Return_to_Origin {
 	}
 	
 	public static boolean judgeCircle(String moves) {
-        int[] origin = {0, 0}; 
-        
-        for(char c : moves.toCharArray()) {
-        	switch(c) {
-        	case 'R':
-        		origin[0]++;
-        		break;
-        	case 'L':
-        		origin[0]--;
-        		break;
-        	case 'U':
-        		origin[1]++;
-        		break;
-        	case 'D':
-        		origin[1]--;
-        		break;
+        	int[] origin = {0, 0}; 
+        	
+        	for(char c : moves.toCharArray()) {
+        		switch(c) {
+        		case 'R':
+        			origin[0]++;
+        			break;
+        		case 'L':
+        			origin[0]--;
+        			break;
+        		case 'U':
+        			origin[1]++;
+        			break;
+        		case 'D':
+        			origin[1]--;
+        			break;
+        		}
         	}
-        }
-        if(origin[0] == 0 && origin[1] == 0)
-        	return true;
-        return false;
-    }
+        	if(origin[0] == 0 && origin[1] == 0)
+        		return true;
+        	return false;
+    	}
 
 }
