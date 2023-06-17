@@ -1,5 +1,5 @@
 package leetcode;
-
+//Implement pow(x, n), which calculates x raised to the power n.
 public class Pow {
 
 	public static void main(String[] args) {
@@ -10,49 +10,50 @@ public class Pow {
 	}
 	
 	public static double myPow(double x, int n) {
+		//用return Math.pow(x, n);會更快
 		double temp = x;
-        if(x == 1)
-            return 1;
-        else if(x == -1) {
-        	if(n % 2 == 0) {
-        		return 1;
+        	if(x == 1)
+           	 return 1;
+       	 	else if(x == -1) {
+        		if(n % 2 == 0) {
+        			return 1;
+        		}
+        		else {
+        			return -1;
+        		}
         	}
-        	else {
-        		return -1;
+        	if(n == 0){
+            	return 1;
         	}
-        }
-        if(n == 0){
-            return 1;
-        }
 
-        if(n < 0){
-        	x = 1 / x;
-        	temp = x;
-        	n = -n;
-            while(n % 2 == 0) {
-            	n /= 2;
-            	x *= temp;
-            	temp = x;
-            }
-            for(int i = 1; i < n; i++){
-                x *= temp;
-            }
+        	if(n < 0){
+        		x = 1 / x;
+        		temp = x;
+        		n = -n;
+            	while(n % 2 == 0) {
+            		n /= 2;
+            		x *= temp;
+            		temp = x;
+            	}
+            	for(int i = 1; i < n; i++){
+                	x *= temp;
+            	}
             
-        }
+        	}
 
-        else{
-            while(n % 2 == 0) {
-            	n /= 2;
-            	x *= temp;
-            	temp = x;
-            }
+        	else{
+            	while(n % 2 == 0) {
+            		n /= 2;
+            		x *= temp;
+            		temp = x;
+            	}
             
-            for(int i = 1; i < n; i++){
-                x *= temp;
-            }
+            	for(int i = 1; i < n; i++){
+                	x *= temp;
+            	}
 
-        }
-        return x;
-    }
+        	}
+        	return x;
+    	}
 
 }
