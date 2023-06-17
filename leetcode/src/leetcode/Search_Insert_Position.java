@@ -1,5 +1,10 @@
 package leetcode;
+/*
+Given a sorted array of distinct integers and a target value, return the index if the target is found. 
+If not, return the index where it would be if it were inserted in order.
 
+You must write an algorithm with O(log n) runtime complexity.
+*/
 public class Search_Insert_Position {
 
 	public static void main(String[] args) {
@@ -9,7 +14,7 @@ public class Search_Insert_Position {
 	}
 	
 	public static int searchInsert(int[] nums, int target) {
-        if(binarysearch(nums, target) >= 0) {
+        if(binarysearch(nums, target) >= 0) {//如果找不到會回傳負的
         	return binarysearch(nums, target);
         }
         else
